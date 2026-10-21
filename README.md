@@ -356,17 +356,23 @@ Tishineng-Running **不是 2.0.25 开箱即用版本**：
 
 ---
 
-## 九、生态项目对比
+## 九、GitHub 仓库索引与生态对比
 
-| 项目 | 结论 |
-|---|---|
-| [FuckTSN](https://github.com/pansoul1/FuckTSN) | Xposed 模块，原支持 2.0.15–2.0.18；本报告已完成 2.0.25 适配并提 PR |
-| [tishineng-analysis](https://github.com/jry21223/tishineng-analysis) | 2.0.22 分析：360 加固、`safe.*`、`Transform`/`x.b` |
-| Tishineng-Running / TiShiNengRunning-main | 完整 Python 协议工具，适合协议研究；登录未适配 2.0.25 |
-| TiShiNengSdk | 清洗过的 Python SDK，仅结构参考 |
-| TiShiNengHacker | 空壳 Compose 工程，无实用逻辑 |
-| fitness | 微信小程序 + Java 后端，与本 App 无关 |
-| Tishineng-Demo / V1 | 本地 Fork：必经点注入、GPS 噪声、路径合成、path_only 账号 |
+本地 `github/` 目录下的每个子目录都对应一个上游 GitHub 仓库（`_extracted/` 是本地解压目录，不是仓库）：
+
+| 本地目录 | GitHub 仓库 | 语言 / 协议 | 说明 |
+|---|---|---|---|
+| `FuckTSN/` | [pansoul1/FuckTSN](https://github.com/pansoul1/FuckTSN) | Java，无 LICENSE | 体适能 Xposed 模块，原支持 2.0.15–2.0.18；本报告已完成 2.0.25 适配并提交 [PR #2](https://github.com/pansoul1/FuckTSN/pull/2) |
+| `TiShiNengHacker/` | [shaokeyibb/TiShiNengHacker](https://github.com/shaokeyibb/TiShiNengHacker) | Kotlin，无 LICENSE，已归档 | 空壳 Compose 工程，只有 `MainActivity`，没有实际 Hook/检测逻辑 |
+| 相关仓库 | [shaokeyibb/TiShiNengHackerR](https://github.com/shaokeyibb/TiShiNengHackerR) | Kotlin，GPL-3.0，已归档 | `TiShiNengHacker` 的相关重写版，含完整项目结构与 LICENSE；本报告未使用其代码 |
+| `TiShiNengSdk/` | [dispose0335/TiShiNengSdk](https://github.com/dispose0335/TiShiNengSdk) | Python，无 LICENSE | 清洗过的协议 SDK；README 声明真实端点/密钥已被移除或替换，仅作结构参考 |
+| `Tishineng-Running/` | [dispose0335/TiShiNengRunning](https://github.com/dispose0335/TiShiNengRunning) | Python，GPL-3.0 | 完整跑步工具：公版/私版登录、跑步、人脸、路径、统计；本地 `TiShiNengRunning-main`、`TiShiNengRunning-Test`、`Tishineng-Demo`、`Tishineng-V1` 均源于此 |
+| `fitness/` | [ZXWITNESS/fitness](https://github.com/ZXWITNESS/fitness) | Vue / Java，无 LICENSE | 名为“体适能”的前端/小程序与 Java 后端项目；与 `com.bxkj.student` **不是同一个 App** |
+| `tishineng-analysis/` | [jry21223/tishineng-analysis](https://github.com/jry21223/tishineng-analysis) | Java，无 LICENSE | 2.0.22 逆向分析：360 加固、`safe.*`、`Transform`/`x.b`、设备指纹绑定；FuckTSN 2.0.18 的适配依据 |
+
+> 许可证提示：`TiShiNengRunning` 与 `TiShiNengHackerR` 使用 GPL-3.0；其余仓库未声明 LICENSE。二次分发或商用前请先联系作者确认授权。
+
+各仓库的详细用途、使用方式和局限见 [docs/ecosystem.md](docs/ecosystem.md)。
 
 ---
 
