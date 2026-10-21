@@ -1,0 +1,12 @@
+# Local analysis artifacts
+*.apk
+*.dex
+*.db
+*.log
+*.bin
+face_images/
+__pycache__/
+.gradle/
+build/
+.idea/
+local.properties
